@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tareas Simple</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,900;1,300;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Tareas Simples</h1>
+        <h1>Tareas Simples con Drag & Drop</h1>
         <div class="control">
             <form id="form">
-                <label for="tareas">Tarea por hacer:</label>
-                <input type="text" id="tarea">
-                <button class="btn-guardar">Guardar</button>
+                <label for="tareas"></label>
+                <input type="text" placeholder="Tarea por hacer" id="tarea" autocomplete="off" autofocus>
+                <button class="btn-guardar">Registrar</button>
             </form>
         </div>
     </header>

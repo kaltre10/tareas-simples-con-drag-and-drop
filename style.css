@@ -2,45 +2,98 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #0984e3;
+    color: #fff;
 }
 header{
     width: 100%;
     text-align: center;
+    padding: 20px 0 30px 0;
 }
 h1{
-    
+    padding: 5px 0 20px 0;
+    font-weight: 600;
+    font-size: 32px;
+}
+h2{
+    font-weight: 100;
+    font-size: 24px;
+}
 }
 .control{
-    
+    padding: 20px;
+}
+.control input[type=text]{
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 24px;
+    height: 50px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+}
+.control button{
+    background-color: #00cec9;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    height: 50px;
+    vertical-align: bottom;
+    color: white;
+}
+.control button:hover{
+    cursor: pointer;
+    background-color: #81ecec;
 }
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: coral;
     width: 100%;
+}
+.tareas-pendientes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+.tareas-completadas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
 }
 .tareas{
     display: inline-flex;
     flex-flow: row wrap;
-    background-color: aquamarine;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
     align-content: flex-start;
-    width: 400px;
-    min-height: 400px;
+    width: 80%;
+    min-height: 350px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: white;
 }
 .completadas{
     display: inline-flex;
-    width: 400px;
-    min-height: 400px;
-    background-color: chocolate;
+    width: 80%;
+    min-height: 350px;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #b2bec3;
 }
 .item{
     display: flex;
-    background-color: bisque;
+    background-color:  #00cec9;
     padding: 5px;
     width: 120px;
     min-height: 50px;
-    margin: 5px;
+    margin: 15px 0 0 15px;
+    border-radius: 5px;
 }
 .item p{
     width: 120px;
@@ -52,7 +105,30 @@ h1{
     position: relative;
     margin-right: 0;
     margin-top: 0;
-    color: darkslateblue;
     font-size: 20px;
     height: 5px;
+    color: white;
+    cursor: pointer;
 }
+.completadas .item{
+    background-color:  #747474;
+    padding: 5px;
+    width: 120px;
+    min-height: 50px;
+    margin: 15px 0 0 15px;
+    border-radius: 5px;
+}
+.item button:hover{
+    color: rgb(160, 160, 160);
+}
+@media (max-width: 700px) {
+    .container{
+        flex-direction: column;
+    }
+    .tareas-pendientes{
+        width: 100%;
+    }
+    .tareas-completadas{
+        width: 100%;
+    }
+  }
